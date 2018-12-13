@@ -1,0 +1,5 @@
+D:\201702-20181127\a\VS2015\WebBootstart01\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\201702-20181127\a\VS2015\WebBootstart01\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\201702-20181127\a\VS2015\WebBootstart01\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\201702-20181127\a\VS2015\WebBootstart01\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\201702-20181127\a\VS2015\WebBootstart01\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

@@ -55,6 +55,5 @@ D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\zh-Hans\System.Web
 D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\zh-Hans\System.Web.WebPages.resources.dll
 D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\obj\Debug\WebBootstart01.csprojResolveAssemblyReference.cache
 D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\obj\Debug\WebBootstart01.dll
 D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\obj\Debug\WebBootstart01.pdb
