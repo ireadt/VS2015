@@ -1,6 +1,9 @@
-﻿
+﻿@using WebBootstart01.ViewModels
+@model EmployeeListViewModel
+
 @{
     Layout = null;
+
 }
 
 <!DOCTYPE html>
@@ -8,10 +11,27 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>MyView</title>
 </head>
 <body>
-    <div> 
+    <h1>你好,@Model.UserName</h1>
+    <hr />
+    <div>
+        <table>
+            <tr>
+                <th>名字</th>
+                <th>工资</th>
+                <th>级别</th>
+            </tr>
+            @foreach (EmployeeViewModel item in Model.Employees)
+            {
+                <tr>
+                    <td>@item.EmployeeName</td>
+                    <td>@item.Salary</td>
+                    <td>@item.SalaryGrade</td>
+                </tr>
+            }
+        </table>
     </div>
 </body>
 </html>

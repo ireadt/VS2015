@@ -1,10 +1,10 @@
-﻿@using WebBootstart01.Models
+﻿@using WebBootstart01.ViewModels
+@model EmployeeListViewModel
 
 @{
     //@model Employee
     Layout = null;
     //Employee emp = (Employee)ViewData["EmpKey"];
-    Employee emp = ViewBag.EmpKey;
 
 }
 
@@ -16,29 +16,24 @@
     <title>MyView</title>
 </head>
 <body>
+    <h1>你好,@Model.UserName</h1>
+    <hr />
     <div> 
-        <h1>@emp.Name,@(ViewBag.greeting)</h1>
-        
-        <hr />
-        <h2>员工信息</h2>
-        <p>姓名：@emp.Name</p>
-        <p>工资：@emp.Salary.ToString("c")</p>
-        <p>
-           @{ 
-               if(emp.Salary>5000)
-               {
-                   <p>有钱人</p>
-               }
-               else
-               {
-                   <p>穷龟</p>
-               }
-             } 
-        </p>
-
-        <p>
-
-        </p>
+        <table>
+            <tr>
+                <th>名字</th>
+                <th>工资</th>
+                <th>级别</th>
+            </tr>
+            @foreach(EmployeeViewModel item in Model.Employees)
+            {
+                <tr>
+                    <td>@item.EmployeeName</td>
+                    <td>@item.Salary</td>
+                    <td>@item.SalaryGrade</td>
+                </tr>
+            }
+        </table>
     </div>
 </body>
 </html>

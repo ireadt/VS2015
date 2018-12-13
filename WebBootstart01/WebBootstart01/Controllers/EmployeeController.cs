@@ -21,12 +21,12 @@ namespace WebBootstart01.Controllers
 
             List<EmployeeViewModel> empViewModels = new List<EmployeeViewModel>();
 
-            foreach(Employee emp in employees)
+            foreach (Employee emp in employees)
             {
                 EmployeeViewModel empViewModel = new EmployeeViewModel();
                 empViewModel.EmployeeName = emp.Name;
                 empViewModel.Salary = emp.Salary.ToString("C");
-                if(emp.Salary>10000)
+                if (emp.Salary > 10000)
                 {
                     empViewModel.SalaryGrade = "高富帅";
                 }
@@ -36,8 +36,10 @@ namespace WebBootstart01.Controllers
                 }
                 empViewModels.Add(empViewModel);
             }
-           // employeeListViewModel.EmployeeViewList
-            return View();
+            employeeListViewModel.Employees = empViewModels;
+
+            employeeListViewModel.UserName = "Admin";
+            return View(employeeListViewModel);
         }
     }
 }

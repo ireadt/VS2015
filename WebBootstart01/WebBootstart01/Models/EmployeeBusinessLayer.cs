@@ -2,32 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using WebBootstart01.Models;
+using WebBootstart01.DataAccessLayer;
 
-namespace WebBootstart01.Controllers
+namespace WebBootstart01.Models
 {
     public class EmployeeBusinessLayer
     {
-        public List<Employee> GetEmployees()
+        public List<Employee>GetEmployees()
         {
-            var list = new List<Employee>();
-            Employee emp = new Employee();
-            emp.Name = "zhazhahui";
-            emp.Salary = 12300;
-            list.Add(emp);
-
-            emp = new Employee();
-            emp.Name = "laji";
-            emp.Salary = 2400;
-            list.Add(emp);
-
-            emp = new Employee();
-            emp.Name = "lese";
-            emp.Salary = 23130;
-            list.Add(emp);
-
-
-            return list;
+            SalesERPDAL salesDal = new SalesERPDAL();
+            return salesDal.Employees.ToList();
         }
     }
 }
