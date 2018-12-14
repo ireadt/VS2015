@@ -9,10 +9,8 @@ namespace WebBootstart01.Models
     public class Employee
     {
         [Key]
+       public int Employeeld { get; set; }
         public string Name { get; set; }
         public int Salary { get; set; }
-
-        public string Client { get; set; }
-        public string From { get; set; }
     }
 }

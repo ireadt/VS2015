@@ -122,3 +122,9 @@ D:\vs2015\VS2015\WebBootstart01\WebBootstart01\bin\EntityFramework.SqlServer.dll
 D:\vs2015\VS2015\WebBootstart01\WebBootstart01\bin\EntityFramework.xml
 D:\vs2015\VS2015\WebBootstart01\WebBootstart01\bin\EntityFramework.SqlServer.xml
 D:\vs2015\VS2015\WebBootstart01\WebBootstart01\bin\zh-Hans\EntityFramework.resources.dll
+D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\EntityFramework.dll
+D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\EntityFramework.SqlServer.dll
+D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\EntityFramework.xml
+D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\EntityFramework.SqlServer.xml
+D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\zh-Hans\EntityFramework.resources.dll
+D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\obj\Debug\WebBootstart01.csprojResolveAssemblyReference.cache
