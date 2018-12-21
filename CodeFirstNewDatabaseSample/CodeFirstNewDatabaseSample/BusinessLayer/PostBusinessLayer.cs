@@ -9,49 +9,49 @@ using CodeFirstNewDatabaseSample.DataAccessLayer;
 
 namespace CodeFirstNewDatabaseSample.BusinessLayer
 {
-    public class BlogBusinessLayer
+    public class PostBusinessLayer
     {
-        public void Add(Blog blog)
+        public void Add(Post post)
         {
             using (var db = new BloggingContext())
             {
-                db.Blogs.Add(blog);
+                db.Entry(post).State = EntityState.Added;
+
                 db.SaveChanges();
             }
         }
-        
-        public List<Blog>Query()
+        public void Delete(Post post)
         {
             using (var db = new BloggingContext())
             {
-                var query = from b in db.Blogs
-                            orderby b.Name
+                db.Entry(post).State = EntityState.Deleted;
+
+                db.SaveChanges();
+            }
+        }
+        public Post QueryPost(int id)
+        {
+            using (var db = new BloggingContext())
+            {
+                return db.Posts.Find(id);
+            }
+        }
+        public List<Post> Query(int blogId)
+        {
+            using (var db = new BloggingContext())
+            {
+                var query = from b in db.Posts
+                            where b.BlogId == blogId
                             select b;
 
                 return query.ToList();
             }
         }
-        public void Update(Blog blog)
+        public void Updata(Post post)
         {
             using (var db = new BloggingContext())
             {
-                db.Entry(blog).State = EntityState.Modified;
-
-                db.SaveChanges();
-            }
-        }
-        public Blog Query(int id)
-        {
-            using (var db = new BloggingContext())
-            {
-                return db.Blogs.Find(id);
-            }
-        }
-        public void Delete(Blog blog)
-        {
-            using (var db = new BloggingContext())
-            {
-                db.Entry(blog).State = EntityState.Deleted;
+                db.Entry(post).State = EntityState.Modified;
 
                 db.SaveChanges();
             }
