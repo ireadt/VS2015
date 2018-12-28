@@ -14,7 +14,6 @@ namespace CodeFirstNewDatabaseSample
         static void Main(string[] args)
         {
             AddPost();
-            
             //CreateNewBlog();
             //QueryBlog();
             //Updata();
@@ -23,7 +22,6 @@ namespace CodeFirstNewDatabaseSample
             Console.WriteLine("按任意键退出");
             Console.ReadKey();
         }
-
         static void CreateNewBlog()
         {
             Console.Write("请输入一个新博客:");
@@ -64,9 +62,6 @@ namespace CodeFirstNewDatabaseSample
             Blog blog = bbl.Query(id);
             bbl.Delete(blog);
         }
-
-
-
 
 
         //显示博客列表
@@ -146,6 +141,14 @@ namespace CodeFirstNewDatabaseSample
             post.Title = title;
             post.Content = content;
             pbl.Updata(post);
+        }
+
+        static void QueryPostForTitle()
+        {
+            Console.WriteLine("请输入将要查找的博客名称:");
+            string title = Console.ReadLine();
+            PostBusinessLayer pbl = new BusinessLayer.PostBusinessLayer();
+            
         }
     }
 }

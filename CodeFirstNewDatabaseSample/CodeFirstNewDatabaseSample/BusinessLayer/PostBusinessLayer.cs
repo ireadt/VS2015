@@ -36,6 +36,29 @@ namespace CodeFirstNewDatabaseSample.BusinessLayer
                 return db.Posts.Find(id);
             }
         }
+        
+        public void Updata(Post post)
+        {
+            using (var db = new BloggingContext())
+            {
+                db.Entry(post).State = EntityState.Modified;
+
+                db.SaveChanges();
+            }
+        }
+
+        public List<Post> ListQuery(string title)
+        {
+            using (var db = new BloggingContext())
+            {
+                //var query = db.Posts.Where(b => (b.Title.Contains(title)));
+                var query = from i in db.Posts
+                            where i.Title.Contains(title)
+                            select i;
+
+                return query.ToList();
+            }
+        }
         public List<Post> Query(int blogId)
         {
             using (var db = new BloggingContext())
@@ -45,15 +68,6 @@ namespace CodeFirstNewDatabaseSample.BusinessLayer
                             select b;
 
                 return query.ToList();
-            }
-        }
-        public void Updata(Post post)
-        {
-            using (var db = new BloggingContext())
-            {
-                db.Entry(post).State = EntityState.Modified;
-
-                db.SaveChanges();
             }
         }
     }

@@ -1,5 +1,5 @@
-﻿@using WebBootstart01.ViewModels
-@model EmployeeListViewModel
+﻿@model WebBootstart01.ViewModels.EmployeeListViewModel
+
 
 @{
     Layout = null;
@@ -14,24 +14,31 @@
     <title>MyView</title>
 </head>
 <body>
-    <h1>你好,@Model.UserName</h1>
+    <form action="/employee/search" method="post">
+        <input type="text" name="searchString" value=""/>
+        <input type="submit" name="搜索" />
+    </form>
+
+
+    <h2>@Model.Greeting,@Model.UserName</h2>
     <hr />
     <div>
         <table>
-            <tr>
-                <th>名字</th>
-                <th>工资</th>
-                <th>级别</th>
-            </tr>
-            @foreach (EmployeeViewModel item in Model.Employees)
+            @foreach (var item in Model.Employees)
             {
                 <tr>
-                    <td>@item.EmployeeName</td>
-                    <td>@item.Salary</td>
-                    <td>@item.SalaryGrade</td>
+                    <td>@item.EmployeeName||@item.EmployeeSalary||@item.SalaryGrade
+                    <a href="/employee/delete/@item.EmployeeId">  删除</a>
+                    <a href="/employee/UpdateEmployee/@item.EmployeeId">修改</a>
+                    </td>
+                    
                 </tr>
             }
         </table>
+        <p>
+            <a href="/employee/addNew">新增</a>
+        </p>
+
     </div>
 </body>
 </html>

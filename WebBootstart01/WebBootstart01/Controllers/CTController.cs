@@ -46,6 +46,12 @@ namespace WebBootstart01.Controllers
             //Cl.SalaryGrade = "满级";
             //Cl.UserName = "管理员~~~";
             //Cl.Greeting = greeting;
+
+
+
+
+
+            //作废------------------------
             return View();
         }
 
