@@ -43,6 +43,7 @@ namespace WebBootstart01.Controllers
         }
 
 
+
         public ActionResult AddNew()
         {
             return View("CreateEmployee");
@@ -80,15 +81,6 @@ namespace WebBootstart01.Controllers
             ebl.UpdateEmp(emp);
             return RedirectToAction("index");
         }
-
-        //public ActionResult Search(string searchString)
-        //{
-        //    EmployeeBusinessLayer ebl = new EmployeeBusinessLayer();
-        //    var queryResult = ebl.Search(searchString);
-        //    return View(queryResult);
-        //}
-
-
 
 
 
