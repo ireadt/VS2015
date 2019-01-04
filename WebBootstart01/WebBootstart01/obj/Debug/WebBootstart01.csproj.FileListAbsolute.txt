@@ -128,3 +128,4 @@ D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\EntityFramework.xm
 D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\EntityFramework.SqlServer.xml
 D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\zh-Hans\EntityFramework.resources.dll
 D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\obj\Debug\WebBootstart01.csprojResolveAssemblyReference.cache
+D:\201702-20181127\a\VS2015\WebBootstart01\WebBootstart01\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
