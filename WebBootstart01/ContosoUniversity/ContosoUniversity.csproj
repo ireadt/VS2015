@@ -175,6 +175,10 @@
     <Compile Include="Migrations\201901080851509_InitialCreate.Designer.cs">
       <DependentUpon>201901080851509_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901080929475_MyCreate.cs" />
+    <Compile Include="Migrations\201901080929475_MyCreate.Designer.cs">
+      <DependentUpon>201901080929475_MyCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enrollment.cs" />
@@ -242,6 +246,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901080851509_InitialCreate.resx">
       <DependentUpon>201901080851509_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901080929475_MyCreate.resx">
+      <DependentUpon>201901080929475_MyCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
