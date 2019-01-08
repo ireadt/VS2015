@@ -13,27 +13,27 @@ namespace ContosoUniversity.DAL
         {
             var students = new List<Student>
             {
-            new Student{FirstMidName="Carson",LastName="Alexander",EnrollmentDate=DateTime.Parse("2005-09-01")},
-            new Student{FirstMidName="Meredith",LastName="Alonso",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="Arturo",LastName="Anand",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            new Student{FirstMidName="Gytis",LastName="Barzdukas",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="Yan",LastName="Li",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="Peggy",LastName="Justice",EnrollmentDate=DateTime.Parse("2001-09-01")},
-            new Student{FirstMidName="Laura",LastName="Norman",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            new Student{FirstMidName="Nino",LastName="Olivetto",EnrollmentDate=DateTime.Parse("2005-09-01")}
+            new Student{FirstMidName="卡尔森",LastName="卢本伟",EnrollmentDate=DateTime.Parse("2005-09-01")},
+            new Student{FirstMidName="梅瑞迪斯",LastName="杰克马",EnrollmentDate=DateTime.Parse("2002-09-01")},
+            new Student{FirstMidName="阿图罗",LastName="纯·简拉基·茨德",EnrollmentDate=DateTime.Parse("2003-09-01")},
+            new Student{FirstMidName="格蒂",LastName="小姐姐",EnrollmentDate=DateTime.Parse("2002-09-01")},
+            new Student{FirstMidName="杨",LastName="小哥哥",EnrollmentDate=DateTime.Parse("2002-09-01")},
+            new Student{FirstMidName="佩吉",LastName="小姐姐",EnrollmentDate=DateTime.Parse("2001-09-01")},
+            new Student{FirstMidName="劳拉",LastName="小姐姐",EnrollmentDate=DateTime.Parse("2003-09-01")},
+            new Student{FirstMidName="尼诺",LastName="小哥哥",EnrollmentDate=DateTime.Parse("2005-09-01")}
             };
 
             students.ForEach(s => context.Students.Add(s));
             context.SaveChanges();
             var courses = new List<Course>
             {
-            new Course{CourseID=550,Title="Chemistry",Credits=3,},
-            new Course{CourseID=560,Title="Microeconomics",Credits=3,},
-            new Course{CourseID=650,Title="Macroeconomics",Credits=3,},
-            new Course{CourseID=660,Title="Calculus",Credits=4,},
-            new Course{CourseID=750,Title="Trigonometry",Credits=4,},
-            new Course{CourseID=960,Title="Composition",Credits=3,},
-            new Course{CourseID=980,Title="Literature",Credits=4,}
+            new Course{CourseID=550,Title="化学",Credits=3,},
+            new Course{CourseID=560,Title="微观经济学",Credits=3,},
+            new Course{CourseID=650,Title="宏观经济学",Credits=3,},
+            new Course{CourseID=660,Title="微积分学",Credits=4,},
+            new Course{CourseID=750,Title="解析三角学",Credits=4,},
+            new Course{CourseID=960,Title="合成化学",Credits=3,},
+            new Course{CourseID=980,Title="文学",Credits=4,}
             };
             courses.ForEach(s => context.Courses.Add(s));
             context.SaveChanges();
