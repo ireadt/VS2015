@@ -11,16 +11,30 @@ namespace ContosoUniversity.DAL
     {
         protected override void Seed(SchoolContext context)
         {
+            var users = new List<UserDetails>
+            {
+                new UserDetails {UserName="admin",Password="admin" },
+                new UserDetails {UserName="guest",Password="guest"}
+            };
+            users.ForEach(u => context.UserDbset.Add(u));
+            context.SaveChanges();
+
+            //users.ForEach(u=>context
+
+
+
+
+
             var students = new List<Student>
             {
-            new Student{FirstMidName="卡尔森",LastName="卢本伟",EnrollmentDate=DateTime.Parse("2005-09-01")},
-            new Student{FirstMidName="梅瑞迪斯",LastName="杰克马",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="阿图罗",LastName="纯·简拉基·茨德",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            new Student{FirstMidName="格蒂",LastName="小姐姐",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="杨",LastName="小哥哥",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="佩吉",LastName="小姐姐",EnrollmentDate=DateTime.Parse("2001-09-01")},
-            new Student{FirstMidName="劳拉",LastName="小姐姐",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            new Student{FirstMidName="尼诺",LastName="小哥哥",EnrollmentDate=DateTime.Parse("2005-09-01")}
+           new Student{FirstMidName="卡尔森",LastName="本",EnrollmentDate=DateTime.Parse("2005-09-01")},
+            new Student{FirstMidName="梅瑞迪斯",LastName="杰",EnrollmentDate=DateTime.Parse("2002-09-01")},
+            new Student{FirstMidName="阿图罗",LastName="德",EnrollmentDate=DateTime.Parse("2003-09-01")},
+            new Student{FirstMidName="格蒂",LastName="莱",EnrollmentDate=DateTime.Parse("2002-09-01")},
+            new Student{FirstMidName="杨",LastName="老",EnrollmentDate=DateTime.Parse("2002-09-01")},
+            new Student{FirstMidName="佩吉",LastName="廖",EnrollmentDate=DateTime.Parse("2001-09-01")},
+            new Student{FirstMidName="劳拉",LastName="哈",EnrollmentDate=DateTime.Parse("2003-09-01")},
+            new Student{FirstMidName="尼诺",LastName="小",EnrollmentDate=DateTime.Parse("2005-09-01")}
             };
 
             students.ForEach(s => context.Students.Add(s));
