@@ -13,7 +13,7 @@ namespace ContosoUniversity.DAL
         {
             var users = new List<UserDetails>
             {
-                new UserDetails {UserName="admin",Password="admin" },
+                new UserDetails {UserName="admin",Password="admin"},
                 new UserDetails {UserName="guest",Password="guest"}
             };
             users.ForEach(u => context.UserDbset.Add(u));
